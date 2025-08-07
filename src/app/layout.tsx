@@ -1,0 +1,26 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Zero Earth - Sustainable Solutions for Tomorrow',
+  description: 'Empowering Communities with Sustainable Technologies',
+  icons: [
+    { rel: 'icon', url: '/favicon-32x32.png' },
+    { rel: 'apple-touch-icon', url: '/favicon-32x32.png' },
+  ],
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
